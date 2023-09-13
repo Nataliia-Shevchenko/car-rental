@@ -9,12 +9,13 @@ import Footer from "./components/footer/Footer";
 function App() {
   return (
     <>
-      <Router>
+      <Router basename="car-rental-ua">
         <Navbar />
         <Routes>
           <Route exact path="/" element={<Home />} />
           <Route path="/catalog" element={<Catalog />} />
           <Route path="/favorites" element={<Favorites />} />
+          <Route path="*" element={<Home />} />
         </Routes>
         <Footer />
       </Router>
