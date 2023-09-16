@@ -76,12 +76,12 @@ const CarCard = ({ car }) => {
         ></img>
       </div>
       <div className="flex justify-between mb-2">
-        <p className="text-base font-medium leading-6 text-primaryt">
+        <p className="text-base font-medium leading-6 text-primaryt max-h-6 overflow-hidden">
           {make} <span className="text-accent">{model}</span>, {year}
         </p>
         <p>{rentalPrice}</p>
       </div>
-      <p className="text-xs font-normal leading-4.5 text-secondaryt">
+      <p className="text-xs font-normal leading-4.5 text-secondaryt max-h-8 overflow-hidden">
         {city} | {splittedAddress[4]} | {rentalCompany} |{type} | {model} |{" "}
         {mileageString} | {functionalities[0]}
       </p>
