@@ -4,7 +4,7 @@ import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 
 
 const navigation = [
-  { name: "Home", href: "/", current: true },
+  { name: "Home", href: "/car-rental-ua", current: true },
   { name: "Catalog", href: "/car-rental-ua/catalog", current: false },
   { name: "Favorites", href: "/car-rental-ua/favorites", current: false },
 ];
@@ -15,7 +15,7 @@ function classNames(...classes) {
 
 export default function Navbar() {
   return (
-    <Disclosure as="nav" className="bg-hover">
+    <Disclosure as="nav" className="bg-hover w-full">
       {({ open }) => (
         <>
           <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
@@ -50,7 +50,7 @@ export default function Navbar() {
                           item.current
                             ? "text-white"
                             : "text-white-300 hover:bg-white hover:text-accent",
-                          "rounded-md px-3 py-2 text-sm font-medium"
+                          "rounded-md px-3 py-2 text-white font-bold"
                         )}
                         aria-current={item.current ? "page" : undefined}
                       >
