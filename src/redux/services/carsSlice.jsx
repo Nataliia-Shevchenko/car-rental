@@ -16,7 +16,11 @@ export const carApi = createApi({
       query: () => ({ url: `/cars` }),
       providesTags: ["cars"],
     }),
+    getCarbyId: builder.query({
+      query: (id) => ({ url: `/cars/:${id}` }),
+      providesTags: ["cars"],
+    }),
   }),
 });
 
-export const { useGetCarsListbyPageQuery, useGetCarsListQuery  } = carApi;
+export const { useGetCarsListbyPageQuery, useGetCarsListQuery, useGetCarbyIdQuery } = carApi;

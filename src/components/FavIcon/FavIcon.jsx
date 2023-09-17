@@ -4,17 +4,9 @@ import { AiOutlineHeart } from "react-icons/ai";
 import { AiFillHeart } from "react-icons/ai";
 
 const FavIcon = ({ id }) => {
-  const [favs, setFavs] = useState([]);
-  // (() =>
-  //   JSON.parse(localStorage.getItem("favorites") || "[]")
-  // );
-
-  useEffect(() => {
-    const favs = JSON.parse(localStorage.getItem("favorites"));
-    if (favs) {
-      setFavs(favs);
-    }
-  }, []);
+  const [favs, setFavs] = useState(() =>
+    JSON.parse(localStorage.getItem("favorites") || "[]")
+  );
 
   const isFavorite = favs.includes(id);
 
@@ -30,9 +22,7 @@ const FavIcon = ({ id }) => {
     }
   };
 
-  // useEffect(() => {
- 
-  // }, [favs]);
+  useEffect(() => {}, [favs]);
 
   return (
     <button

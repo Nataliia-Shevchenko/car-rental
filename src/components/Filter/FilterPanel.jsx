@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Listbox } from "@headlessui/react";
-import { useGetCarsListQuery } from "../../redux/carsSlice";
+import { useGetCarsListQuery } from "../../redux/services/carsSlice";
 import { ChevronDownIcon } from "@heroicons/react/24/outline";
 
 const FilterPanel = () => {
@@ -26,7 +26,7 @@ const FilterPanel = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // data.filter((el) => el.make === selectedModel);
+
   };
 
   useEffect(() => {

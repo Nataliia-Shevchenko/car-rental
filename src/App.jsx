@@ -18,7 +18,7 @@ function App() {
           <Route path="/favorites" element={<Favorites />} />
           <Route path="*" element={<Home />} />
         </Routes>
-        <Toaster/>
+        <Toaster />
         <Footer />
       </Router>
     </>

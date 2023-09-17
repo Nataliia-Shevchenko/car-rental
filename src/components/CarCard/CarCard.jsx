@@ -1,6 +1,5 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import PropTypes from "prop-types";
-// import { HeartIcon } from "@heroicons/react/24/outline";
 import numberWithCommas from "../../helpers/numberWithCommas";
 import FavIcon from "../FavIcon/FavIcon";
 import ModalCarDetails from "../modal/ModalCarDetails";
@@ -23,27 +22,12 @@ const CarCard = ({ car }) => {
 
   const [showModal, setShowModal] = useState(false);
 
-  // const [favs, setFavs] = useState(() =>
-  //   JSON.parse(localStorage.getItem("favs") ?? [])
-  // );
-  const [favs, setFavs] = useState([]);
-
-  useEffect(() => {
-    const favs = JSON.parse(localStorage.getItem("favorites"));
-    if (favs) {
-      setFavs(favs);
-    }
-  }, []);
-
   const toggleModal = () => {
     setShowModal(!showModal);
   };
-  // useEffect(() => {
 
-  // }, [favs]);
-
- 
   const splittedAddress = address.split(" ");
+
   const city = splittedAddress[3].slice(0, splittedAddress[3].length - 1);
 
   const mileageString = numberWithCommas(mileage);

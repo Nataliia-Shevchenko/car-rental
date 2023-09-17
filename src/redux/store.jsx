@@ -1,6 +1,5 @@
 import { configureStore } from "@reduxjs/toolkit";
-import { carApi } from "./carsSlice";
-// import { reducer } from './reducer.jsx';
+import { carApi } from "./services/carsSlice";
 
 export const store = configureStore({
   reducer: {

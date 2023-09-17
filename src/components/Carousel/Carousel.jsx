@@ -10,7 +10,6 @@ const Carousel = () => {
           autoplay
           autoplaySpeed={1}
           speed={1}
-          // onReady={() => console.log('I am ready')}
         >
           {logoList.map((item) => (
             <div key={item.id} className=' border-2 border-hover bg-gradient-to-r from-green-400 to-blue-500 drop-shadow-xl rounded h-36 w-48 mt-10 mb-10 text-center'>

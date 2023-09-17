@@ -1,3 +1,3 @@
 export default function splitText(x) {
-    return x.split(/[.,!,?,\n]/);
+  return x.split(/[.,!,?,\n]/);
 }

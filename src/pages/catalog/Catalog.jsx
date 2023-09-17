@@ -3,7 +3,7 @@ import FilterPanel from "../../components/Filter/FilterPanel";
 
 const Catalog = () => {
   return (
-    <div className="container mx-auto px-128">
+    <div className="container mx-auto">
       <FilterPanel />
       <CarList />
     </div>
