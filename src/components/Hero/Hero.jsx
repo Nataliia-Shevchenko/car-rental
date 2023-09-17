@@ -3,7 +3,7 @@ import { ArrowRightIcon } from "@heroicons/react/24/outline";
 const Hero = () => {
   return (
     <div>
-      <div className="h-[500px] w-full px-10 py-10 bg-cover bg-bottom bg-[url('https://res.cloudinary.com/dvkutwyno/image/upload/v1694879066/logos/hero_gouqbo.jpg')]">
+      <div className="h-[500px] w-full px-10 py-10 bg-secondaryt bg-cover bg-bottom bg-[url('https://res.cloudinary.com/dvkutwyno/image/upload/v1694879066/logos/hero_gouqbo.jpg')]">
         <div className="">
           <h1 className="text-white text-8xl font-bold mb-20 text-right">
             Car Rental Service N1 <br /> in Ukraine

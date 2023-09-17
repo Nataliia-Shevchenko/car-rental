@@ -19,6 +19,7 @@ export default {
     },
     fontFamily: {
       sans: ["Manrope", "sans-serif"],
+      sans2: ["Montserrat", "sans-serif"],
     },
   },
   plugins: [require("tailwind-scrollbar")({ nocompatible: true })],

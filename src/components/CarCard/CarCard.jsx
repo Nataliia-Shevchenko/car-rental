@@ -1,8 +1,10 @@
 import { useEffect, useState } from "react";
 import PropTypes from "prop-types";
-import { HeartIcon } from "@heroicons/react/24/outline";
+// import { HeartIcon } from "@heroicons/react/24/outline";
 import numberWithCommas from "../../helpers/numberWithCommas";
+import FavIcon from "../FavIcon/FavIcon";
 import ModalCarDetails from "../modal/ModalCarDetails";
+
 
 const CarCard = ({ car }) => {
   const {
@@ -26,31 +28,21 @@ const CarCard = ({ car }) => {
   // );
   const [favs, setFavs] = useState([]);
 
+  useEffect(() => {
+    const favs = JSON.parse(localStorage.getItem("favorites"));
+    if (favs) {
+      setFavs(favs);
+    }
+  }, []);
+
   const toggleModal = () => {
     setShowModal(!showModal);
   };
+  // useEffect(() => {
 
-  useEffect(() => {
-   
-  }, [favs]);
+  // }, [favs]);
 
-  const addToFavs = (car) => {
-    setFavs((prevState) => [...prevState, car]);
-    // localStorage.setItem('favs', JSON.stringify(car));
-  };
-
-  const delFromFavs = (car) => {
-    const filteredFavs = favs.filter((el) => el.id !== car.id);
-    setFavs(filteredFavs);
-  };
-
-  const ifExists = (car) => {
-    if (favs.filter((el) => el.id === car.id).length > 0) {
-      return true;
-    }
-    return false;
-  };
-
+ 
   const splittedAddress = address.split(" ");
   const city = splittedAddress[3].slice(0, splittedAddress[3].length - 1);
 
@@ -59,16 +51,7 @@ const CarCard = ({ car }) => {
   return (
     <div className="flex flex-col w-[274px] ">
       <div className="flex relative justify-center items-center rounded-xl overflow-hidden mb-3.5 h-[268px] w-[274px]">
-        <button
-          className="h-4 w-4 absolute top-2 right-2 "
-          type="button"
-          // onClick={ifExists(car) ? delFromFavs(car) : addToFavs(car)}
-        >
-          <HeartIcon
-            className="h-4 w-4 text-white hover:text-accent"
-            // name={ifExists(car) ? "favorite" : "favorite-outline"}
-          />
-        </button>
+        <FavIcon id={id} />
         <img
           className="w-full h-full max-w-none object-cover"
           src={img}

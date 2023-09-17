@@ -111,7 +111,7 @@ const ModalCarDetails = ({ car }) => {
                     <p className=" mb-4 text-sm font-normal leading-5 text-primaryt">
                       Rental Conditions:
                     </p>
-                    <div className="ml-3.5 mb-5 text-xs font-normal leading-4.5 tracking-tighter">
+                    <div className="ml-3.5 mb-5 font-sans2 text-xs font-normal leading-4.5 tracking-tighter">
                       <div className="flex gap-8 mb-[22px]">
                         <p>
                           {ageConditions[0]} {ageConditions[1]} {" "}

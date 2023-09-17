@@ -34,11 +34,11 @@ export default function Navbar() {
               </div>
               <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
                 <div className="flex flex-shrink-0 items-center">
-                 <img
+                 <a href="/car-rental-ua"><img
                     className="h-9 w-auto"
-                    src="/car-rental.svg"
+                    src="https://res.cloudinary.com/dvkutwyno/image/upload/v1694950958/logos/logo_tmamoj.svg"
                     alt="Car Rental logo"
-                  />
+                  /></a>
                 </div>
                 <div className="hidden sm:ml-6 sm:block">
                   <div className="flex space-x-4">
@@ -72,7 +72,7 @@ export default function Navbar() {
                   href={item.href}
                   className={classNames(
                     item.current
-                      ? "bg-gray-900 text-white"
+                      ? "text-white"
                       : "text-gray-300 hover:bg-gray-700 hover:text-white",
                     "block rounded-md px-3 py-2 text-base font-medium"
                   )}

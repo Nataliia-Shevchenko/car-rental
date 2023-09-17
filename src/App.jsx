@@ -5,6 +5,7 @@ import Catalog from "./pages/catalog/Catalog";
 import Favorites from "./pages/favorites/Favorites";
 import "./App.css";
 import Footer from "./components/footer/Footer";
+import { Toaster } from "react-hot-toast";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Route path="/favorites" element={<Favorites />} />
           <Route path="*" element={<Home />} />
         </Routes>
+        <Toaster/>
         <Footer />
       </Router>
     </>
